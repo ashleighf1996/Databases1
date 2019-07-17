@@ -1,0 +1,101 @@
+-- @G:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\queries_23.txt
+-- @F:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\queries_23.txt
+
+/* 
+CSY1026 - ASSIGNMENT 2  
+GROUP 23 MEMBERS: ASHLEIGH FOSTER (16427265), AMNA HIRA MAHMOOD (16433342), HAMZA MEHMOOD (15418599), AAKANKSHA PATIL (16432582)
+SQL-ORACLE Login: csy1026_264@student/CSY1026_264 DATE: 16/02/2017
+*/
+SELECT * FROM customers;
+SELECT * FROM teams;
+SELECT * FROM sales_reps;
+SELECT * FROM payment_methods;
+SELECT * FROM customer_payments;
+SELECT * FROM bills;
+SELECT * FROM holidays; 
+SELECT * FROM boards;
+SELECT * FROM flights;
+SELECT * FROM locations;
+SELECT * FROM hotels;
+SELECT * FROM holiday_details;
+
+-- DESC / JOIN QUERIES
+
+SELECT c.customer_lastname, c.customer_firstname, c.contact_number, c.gender
+FROM customers c
+ORDER BY c.customer_lastname DESC, c.booking_date;
+
+SELECT customer_firstname, gender, customers.customer_id
+FROM customers JOIN customer_payments
+ON customers.customer_id = customer_payments.customer_id;
+
+SELECT locations.location_name, locations.location_country, locations.arrival_date, hotels.room_number
+FROM locations JOIN hotels
+ON locations.location_id = hotels.location_id;
+
+SELECT sales_reps.staff_firstname, sales_reps.staff_lastname, holidays.location_name, holidays.country_name
+FROM sales_reps JOIN holidays
+ON sales_reps.staff_id = holidays.staff_id;
+
+-- WHERE condition QUERIES
+
+SELECT customers.customer_firstname, gender, payment_method
+FROM customers JOIN customer_payments
+ON customers.customer_id = customer_payments.customer_id
+WHERE payment_method = 'CASH'
+ORDER BY customers.customer_lastname;
+
+
+SELECT flight_name, location_name, arrival_date
+FROM flights
+WHERE location_name = 'DUBAI'
+AND arrival_date > '15-JUL-2016';
+
+SELECT teams.team_id, teams.team_name
+FROM teams
+WHERE teams.team_id != 22222240
+AND team_name LIKE 'TEAM_';
+
+-- OPERATOR
+
+
+SELECT customer_lastname
+FROM customers
+MINUS
+SELECT customer_lastname
+FROM customer_payments;
+
+SELECT customer_lastname
+FROM customers
+INTERSECT
+SELECT customer_lastname
+FROM customer_payments;
+
+SELECT customer_lastname
+FROM customers
+UNION
+SELECT customer_lastname
+FROM customer_payments;
+
+
+-- MANY JOINED IN 1
+
+SELECT customer_lastname, payment_method, payment_amount + tip
+FROM customer_payments
+WHERE tip + payment_amount > 40
+AND payment_method LIKE 'CA%'
+AND customer_lastname LIKE 'MA%'
+AND tip > 1
+ORDER BY tip + payment_amount DESC;
+
+-- BETWEEN
+
+SELECT staff_firstname, staff_lastname, country
+FROM sales_reps
+WHERE date_registered BETWEEN '28-FEB-2014' AND '28-NOV-2014';
+
+
+
+SELECT customer_firstname, customer_lastname, booking_date
+FROM customers
+WHERE booking_date BETWEEN '01-MAR-2017' AND '13-MAR-2017';

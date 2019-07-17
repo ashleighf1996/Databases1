@@ -1,0 +1,209 @@
+-- @G:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\constraint_23.txt
+-- @F:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\constraint_23.txt
+
+/* 
+CSY1026 - ASSIGNMENT 2  
+GROUP 23 MEMBERS: ASHLEIGH FOSTER (16427265), AMNA HIRA MAHMOOD (16433342), HAMZA MEHMOOD (15418599), AAKANKSHA PATIL (16432582)
+SQL-ORACLE Login: csy1026_264@student/CSY1026_264 DATE: 16/02/2017
+*/
+
+-- A D D I N G   P R I M A R Y   K E Y S
+
+
+ALTER TABLE customers
+ADD CONSTRAINT 			pk_customers
+PRIMARY KEY				(customer_id);
+
+
+ALTER TABLE teams
+ADD CONSTRAINT 			pk_teams
+PRIMARY KEY				(team_id);
+
+
+ALTER TABLE sales_reps
+ADD CONSTRAINT 			pk_sales_reps
+PRIMARY KEY				(staff_id);
+
+
+ALTER TABLE payment_methods
+ADD CONSTRAINT 			pk_payment_methods
+PRIMARY KEY				(payment_id);
+
+
+ALTER TABLE customer_payments
+ADD CONSTRAINT 			pk_customer_payments
+PRIMARY KEY				(customer_payment_id);
+
+
+ALTER TABLE bills
+ADD CONSTRAINT 			pk_bills
+PRIMARY KEY				(bill_id);
+
+
+ALTER TABLE holidays
+ADD CONSTRAINT 			pk_holidays
+PRIMARY KEY				(bill_id, customer_id, staff_id);
+
+
+ALTER TABLE boards
+ADD CONSTRAINT 			pk_boards
+PRIMARY KEY				(board_id);
+
+
+ALTER TABLE flights
+ADD CONSTRAINT 			pk_flights
+PRIMARY KEY				(flight_id);
+
+
+ALTER TABLE locations
+ADD CONSTRAINT 			pk_locations
+PRIMARY KEY				(location_id);
+
+
+ALTER TABLE hotels
+ADD CONSTRAINT 			pk_hotels
+PRIMARY KEY				(hotel_id);
+
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT 			pk_holiday_details
+PRIMARY KEY				(holiday_details_id);
+
+
+-- A D D I N G   F O R E I G N   K E Y S 
+
+
+ALTER TABLE sales_reps
+ADD CONSTRAINT 			fk_sr_teams
+FOREIGN KEY 			(team_id)
+REFERENCES 				teams(team_id);
+
+
+ALTER TABLE customer_payments
+ADD CONSTRAINT 			fk_cp_payment_methods
+FOREIGN KEY 			(payment_id)
+REFERENCES 				payment_methods(payment_id);
+
+
+ALTER TABLE customer_payments
+ADD CONSTRAINT 			fk_cp_customers
+FOREIGN KEY 			(customer_id)
+REFERENCES 				customers(customer_id);
+
+
+ALTER TABLE bills
+ADD CONSTRAINT			fk_b_customer_payments
+FOREIGN KEY 			(customer_payment_id)
+REFERENCES 				customer_payments(customer_payment_id);
+
+
+ALTER TABLE holidays
+ADD CONSTRAINT 			fk_h_bills
+FOREIGN KEY 			(bill_id)
+REFERENCES 				bills(bill_id);
+
+
+ALTER TABLE holidays
+ADD CONSTRAINT 			fk_h_customers
+FOREIGN KEY 			(customer_id)
+REFERENCES 				customers(customer_id);
+
+
+ALTER TABLE holidays
+ADD CONSTRAINT 			fk_h_sales_reps
+FOREIGN KEY 			(staff_id)
+REFERENCES 				sales_reps(staff_id);
+
+
+ALTER TABLE hotels
+ADD CONSTRAINT 			fk_h_locations
+FOREIGN KEY 			(location_id)
+REFERENCES 				locations(location_id);
+
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT 			fk_hd_holidays
+FOREIGN KEY 			(bill_id, customer_id, staff_id)
+REFERENCES 				holidays(bill_id, customer_id, staff_id);
+
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT 			fk_hd_boards
+FOREIGN KEY 			(board_id)
+REFERENCES 				boards(board_id);
+
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT 			fk_hd_flights
+FOREIGN KEY 			(flight_id)
+REFERENCES 				flights(flight_id);
+
+
+ALTER TABLE holiday_details
+ADD CONSTRAINT 			fk_hd_hotels
+FOREIGN KEY 			(hotel_id)
+REFERENCES 				hotels(hotel_id);
+
+
+-- MODIFY COLUMNS
+
+
+ALTER TABLE holidays MODIFY (
+location_name VARCHAR2(25));
+
+
+ALTER TABLE flights MODIFY (
+location_country VARCHAR2(50));
+
+
+ALTER TABLE hotels MODIFY (
+hotel_rating VARCHAR2(5));
+
+
+-- ADD COLUMNS TO TABLE
+
+
+ALTER TABLE customers ADD (
+postcode VARCHAR2(10));
+
+
+ALTER TABLE customer_payments ADD (
+payment_amount NUMBER(5),
+tip NUMBER(5));
+
+
+ALTER TABLE holidays ADD (
+country_name VARCHAR2(20) DEFAULT 'UK',
+area VARCHAR2(15));
+
+
+ALTER TABLE hotels ADD(
+hotel_name VARCHAR2(30),
+hotel_address VARCHAR2(25));
+
+
+-- CHECKS
+
+
+ALTER TABLE customers
+ADD CONSTRAINT 			ck_customers_gender
+CHECK 					(gender IN('F', 'M'));
+
+ALTER TABLE customers
+ADD CONSTRAINT 			ck_customers_title
+CHECK 					(title IN('MR', 'MRS'));
+
+ALTER TABLE sales_reps
+ADD CONSTRAINT 			ck_sales_reps_title
+CHECK 					(title IN('MR', 'MRS'));
+
+ALTER TABLE customers 
+ADD CONSTRAINT 			u_email
+UNIQUE 					(email); 
+
+ALTER TABLE flights
+ADD CONSTRAINT 			u_contact_no
+UNIQUE 					(contact_no);
+
+
+SELECT constraint_name, table_name FROM user_constraints;

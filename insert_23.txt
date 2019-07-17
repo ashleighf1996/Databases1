@@ -1,0 +1,422 @@
+﻿-- @G:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\insert_23.txt
+-- @F:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\insert_23.txt
+
+/* 
+CSY1026 - ASSIGNMENT 2  
+GROUP 23 MEMBERS: ASHLEIGH FOSTER (16427265), AMNA HIRA MAHMOOD (16433342), HAMZA MEHMOOD (15418599), AAKANKSHA PATIL (16432582)
+SQL-ORACLE Login: csy1026_264@student/CSY1026_264 DATE: 16/02/2017
+*/
+
+
+-- C U S T O M E R S  R E C O R D S
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'HAMZA', 'MEHMOOD', '9 BERCHAM', 'NORTHAMPTON', 'LONDON', 'NN852KH', 01908785615254, 'HAMZAMEHMOOD@HOTMAIL.COM', 'M', '02-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'AMNA HIRA', 'MEHMOOD', '4 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852JH', 'UK', 01908785615245, 'AMNAHIRAMEHMOOD@HOTMAIL.COM', 'F', '04-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'AKKANKSHA', 'PATIL', '8 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852CD', 'UK', 01908785615232, 'AKKANKSHAPATIL@HOTMAIL.COM', 'F', '05-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'ADAM', 'Smith', '12 BERCHAM', 'SOUTHAMPTON', 'LONDON', 'NN852IU', 'UK', 01908785615435, 'ADAMSMITH@HOTMAIL.COM', 'M', '06-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'PHILL', 'MILLER', '1 BERCHAM', 'LUTON', 'LONDON', 'NN852MN', 'UK', 01908785655245, 'PHILLMILLER@HOTMAIL.COM', 'M', '07-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'LULIA', 'MEHMOOD', '7 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852SA', 'UK', 01908785687245, 'LULIAMEHMOOD@HOTMAIL.COM', 'F', '08-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'HANNAH', 'MONTANA', '9 BERCHAM', 'LEICESTER', 'LONDON', 'NN852JH', 'UK', 01954785615245, 'HANNAHMONTANA@HOTMAIL.COM', 'F', '09-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'FALAH', 'SHEIKH', '7 BERCHAM', 'NORTHAMPTON', 'LONDON', 'NN852VC', 'UK', 01908788715245, 'FALAHAMNA@HOTMAIL.COM', 'M', '10-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'AKKU', 'PATIL', '12 BERCHAM', 'OXFORD', 'LONDON', 'NN852AH', 'UK', 01908785613945, 'PRAVEENAKKANKSHA@HOTMAIL.COM', 'M', '11-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'TOM', 'ADAM', '10 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852RT', 'UK', 01908789015245, 'TOMADAM@HOTMAIL.COM', 'M', '12-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'LINDA', 'COLLINS', '76 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852JH', 'UK', 01908595615245, 'LINDACOLLINS@HOTMAIL.COM', 'F', '13-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'GARY', 'FISHER', '98 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852JH', 'UK', 01900185615245, 'GARYFISHER@HOTMAIL.COM', 'F', '14-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'RYAN', 'BUTLER', '41 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN843JH', 'UK', 01908785115245, 'RYANBUTLER@HOTMAIL.COM', 'M', '15-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MR', 'ELLEN', 'FIN', '40 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852JH', 'UK', 01908760615245, 'ELLENFIN@HOTMAIL.COM', 'M', '16-MAR-2017');
+
+
+INSERT INTO customers 
+(customer_id, title, customer_firstname, customer_lastname, address_line1, town, county, postcode, country, contact_number, email, gender, booking_date)
+VALUES (seq_customers.NEXTVAL, 'MRS', 'VICKIE', 'MARY', '45 BERCHAM', 'MILTON KEYENS', 'LONDON', 'NN852JH', 'UK', 01908751615245, 'VICKIEMARRY@HOTMAIL.COM', 'F', '17-MAR-2017');
+
+
+
+-- T E A M S  R E C O R D S
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM1', 'ASTEROIDS', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582495, 'ASTER.1@YAHOO.COM', '01-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM2', 'COMETS', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582496, 'COMETS.2@YAHOO.COM', '02-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM3', 'ECLIPSE', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582497, 'ECLIPSE.3@YAHOO.COM', '03-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM4', 'GALAXY', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582498, 'GALAXY.4@YAHOO.COM', '04-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM5', 'MERCURY', 'EACH TEAM CAN HAVE 8 MEMBERS ONLY', 01908582499, 'MERCURY.5@YAHOO.COM', '05-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM6', 'BLIZZARD', 'EACH TEAM CAN HAVE 5 MEMBERS ONLY', 01908582500, 'BLIZZARD.6@YAHOO.COM', '06-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM7', 'COSMOS', 'EACH TEAM CAN HAVE 8 MEMBERS ONLY', 01908582501, 'COSMOS.7@YAHOO.COM', '07-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM8', 'UNICORNS', 'EACH TEAM CAN HAVE 5 MEMBERS ONLY', 01908582502, 'UNICORNS.8@YAHOO.COM', '08-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM9', 'THUNDER', 'EACH TEAM CAN HAVE 5 MEMBERS ONLY', 01908582503, 'THUNDER.9@YAHOO.COM', '09-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM10', 'AVE', 'EACH TEAM CAN HAVE 8 MEMBERS ONLY', 01908582504, 'AVENUE.10@YAHOO.COM', '10-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM11', 'PARK', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582505, 'PARK.11@YAHOO.COM', '11-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM12', 'GRENDON', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582506, 'GRENDON.12@YAHOO.COM', '12-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM13', 'QUINTON', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582507, 'QUINTON.13@YAHOO.COM', '13-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM14', 'NEWTON', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582508, 'NEWTON.14@YAHOO.COM', '14-JUL-2016');
+
+
+INSERT INTO teams
+(team_id, team_name, department_name, description, contact_number, department_email, date_registered)
+VALUES (seq_teams.NEXTVAL, 'TEAM15', 'MAIDWELL', 'EACH TEAM CAN HAVE 10 MEMBERS ONLY', 01908582509, 'MAIDW.15@YAHOO.COM', '15-JUL-2016');
+
+
+
+-- S A L E S _ R E P S   R E C O R D S
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MRS', 'LUCY', 'MANDY', 22222220, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'LUCYMANDY@NORTHAMPTON.AC.UK', 'F', '09-MAR-2015');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MRS', 'CARROLE', 'MANDY', 22222225 , 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'CARROLEMANDY@NORTHAMPTON.AC.UK', 'F', '09-MAR-2015');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'MARK', 'JOHNSON', 22222230, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'MARKJOHNSON@NORTHAMPTON.AC.UK', 'M', '10-MAY-1996');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'SURAJ', 'AJIT', 22222235, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'SURAJAJIT@NORTHAMPTON.AC.UK', 'M', '30-SEP-2011');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'GARY', 'HILL', 22222240, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'GARYHILL@NORTHAMPTON.AC.UK', 'M', '01-APRIL-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'HEYDON', 'HANCOX', 22222245, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'HEYDONHANCOX@NORTHAMPTON.AC.UK', 'M', '05-JUL-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'LIZ', 'COULTER-SMITH', 22222250, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'LIZCOULTER@NORTHAMPTON.AC.UK', 'F', '01-APR-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'RYAN', 'EDWARDS', 22222255, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'RYANEDWARDS@NORTHAMPTON.AC.UK', 'M', '24-FEB-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'SCOTT', 'TURNER', 22222260, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'SCOTT-TURNER@NORTHAMPTON.AC.UK', 'M', '19-DEC-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'TOM', 'BUTLER', 22222265, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'TOMBUTLER@NORTHAMPTON.AC.UK', 'M', '06-JAN-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'TOM', 'ROSE', 22222270, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'TOMROSE@NORTHAMPTON.AC.UK', 'M', '20-NOV-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'YINGHUI', 'ZHANG', 22222275, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'YINGHUIZHANG@NORTHAMPTON.AC.UK', 'M', '27-OCT-2014');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MRS', 'MOON', 'FACE', 22222280, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'MOONFACE@NORTHAMPTON.AC.UK', 'F', '09-SEP-2001');
+
+
+INSERT INTO sales_reps 
+(staff_id, title, staff_firstname, staff_lastname, team_id, address_line1, town, county, postcode, country, contact_number, email, gender, date_registered)
+VALUES (seq_sales_reps.NEXTVAL, 'MR', 'ALI', 'AL-SHERBAZ', 22222285, 'ST. GEORGES AVE', 'NORTHAMPTON', 'LONDON', 'NN26JD', 'UK', 01604735500, 'ALI-SHERBAZ@NORTHAMPTON.AC.UK', 'M', '31-AUG-2012');
+
+
+
+-- P A Y M E N T  M E T H O D S
+
+INSERT INTO payment_methods
+(payment_id, payment_m_details)
+VALUES(seq_payment_methods.NEXTVAL, 'FOR BUYING GOODS');
+
+
+INSERT INTO payment_methods
+(payment_id, payment_m_details)
+VALUES(seq_payment_methods.NEXTVAL, 'FOR BUYING TICKETS');
+
+
+INSERT INTO payment_methods
+(payment_id, payment_m_details)
+VALUES(seq_payment_methods.NEXTVAL, 'FOR BOOKING RESERVATION');
+
+
+INSERT INTO payment_methods
+(payment_id, payment_m_details)
+VALUES(seq_payment_methods.NEXTVAL, 'FOR BUYING DRINKS');
+
+
+INSERT INTO payment_methods
+(payment_id, payment_m_details)
+VALUES(seq_payment_methods.NEXTVAL, 'FOR BUYING CHOCLATES');
+
+
+
+-- C U S T O M E R   P A Y M E N T S 
+
+INSERT INTO customer_payments
+(customer_payment_id, customer_firstame, customer_lastname, payment_method, payment_details, payment_id, customer_id, payment_amount, tip)
+VALUES(seq_customer_payments.NEXTVAL, 'HAMZA','ADAM','CASH','FOR BUYING STUFF',44444440, 11111110, 20, 5 );
+
+
+INSERT INTO customer_payments
+(customer_payment_id, customer_firstame, customer_lastname, payment_method, payment_details, payment_id, customer_id, payment_amount, tip)
+VALUES(seq_customer_payments.NEXTVAL, 'AKSHAY','COLLINS','CARD','FOR BUYING CLOTHES',44444445, 11111135, 52, 0 );
+
+
+INSERT INTO customer_payments
+(customer_payment_id, customer_firstame, customer_lastname, payment_method, payment_details, payment_id, customer_id, payment_amount, tip)
+VALUES(seq_customer_payments.NEXTVAL, 'HAMMAD','MONTANA','CASH','FOR RESERVING SEATS',44444450, 11111140, 60, 1 );
+
+
+INSERT INTO customer_payments
+(customer_payment_id, customer_firstame, customer_lastname, payment_method, payment_details, payment_id, customer_id, payment_amount, tip)
+VALUES(seq_customer_payments.NEXTVAL, 'AKKU','PATIL','CASH','FOR BOOKING HOTEL ROOMS',44444455, 11111145, 43, 5 );
+
+
+INSERT INTO customer_payments
+(customer_payment_id, customer_firstame, customer_lastname, payment_method, payment_details, payment_id, customer_id, payment_amount, tip)
+VALUES(seq_customer_payments.NEXTVAL, 'SID','FOSTER','CARD','FOR BUYING GROCERY',44444460, 11111150, 50, 2 );
+
+
+
+-- B I L L S
+
+INSERT INTO bills 
+(bill_id, amount, description, date_invoiced, customer_payment_id)
+VALUES (seq_bills.NEXTVAL, '£1000', 'PAID BY CASH', '12-FEB-2016', 55555550 );
+
+
+INSERT INTO bills 
+(bill_id, amount, description, date_invoiced, customer_payment_id)
+VALUES (seq_bills.NEXTVAL, '£1500', 'PAID BY CARD', '13-FEB-2016', 55555555 );
+
+
+INSERT INTO bills 
+(bill_id, amount, description, date_invoiced, customer_payment_id)
+VALUES (seq_bills.NEXTVAL, '£2000', 'PAID BY CASH', '14-FEB-2016', 55555560 );
+
+
+INSERT INTO bills 
+(bill_id, amount, description, date_invoiced, customer_payment_id)
+VALUES (seq_bills.NEXTVAL, '£2500', 'PAID BY CARD', '15-FEB-2016', 55555565 );
+
+
+INSERT INTO bills
+(bill_id, amount, description, date_invoiced, customer_payment_id)
+VALUES (seq_bills.NEXTVAL, '£3000', 'PAID BY CASH', '16-FEB-2016', 55555570 );
+
+
+
+-- H O L I D A Y S
+
+INSERT INTO holidays 
+(holiday_id, location_name, country_name, area, bill_id, customer_id, staff_id)
+VALUES (11110000, 'PARIS', 'FRANCE', 'MARKET AREA', 66666660, 11111110, 33333330);
+
+
+INSERT INTO holidays 
+(holiday_id, location_name, country_name, area, bill_id, customer_id, staff_id)
+VALUES (11110005, 'LAHORE', 'PAKISTAN', 'DISTRICT AREA', 66666665, 11111135, 33333335);
+
+
+INSERT INTO holidays 
+(holiday_id, location_name, country_name, area, bill_id, customer_id, staff_id)
+VALUES (11110010, 'PUNE', 'INDIA', 'HIGH ST. AREA', 66666670, 11111140, 33333340);
+
+
+INSERT INTO holidays 
+(holiday_id, location_name, country_name, area, bill_id, customer_id, staff_id)
+VALUES (11110015, 'CHICAGO', 'USA', 'STREET AREA', 66666675, 11111145, 33333345);
+
+
+INSERT INTO holidays 
+(holiday_id, location_name, country_name, area, bill_id, customer_id, staff_id)
+VALUES (11110020, 'SYDNEY', 'AUSTRALIA', 'COUNTRYSIDE', 66666680, 11111150, 33333350);
+
+
+
+-- B O A R D S
+
+INSERT INTO boards VALUES (seq_boards.NEXTVAL, 'ECONOMY', 'SEATS ON BOARD');
+INSERT INTO boards VALUES (seq_boards.NEXTVAL, 'BUSINESS', 'SEAT NUMBER');
+INSERT INTO boards VALUES (seq_boards.NEXTVAL, 'FIRST CLASS', 'SEATS BOOKED');
+INSERT INTO boards VALUES (seq_boards.NEXTVAL, 'ECONOMY', 'SEATS ON BOARD');
+INSERT INTO boards VALUES (seq_boards.NEXTVAL, 'BUSINESS', 'SEAT NUMBER');
+
+
+
+-- F L I G H T S 
+
+INSERT INTO flights VALUES (seq_flights.NEXTVAL, 'ETIHAD AIRWAYS', 07341051681, 'ABU DHABI', 'UAE', '15-JUL-2016', 1700, 1900, 'LOW COST', 385, 121, 290);
+INSERT INTO flights VALUES (seq_flights.NEXTVAL, 'BRITISH AIRWAYS', 07341051682, 'LONDON', 'UNITED KINGDOM', '16-JUL-2016', 1400, 1800, 'CHARTER', 395, 129, 292);
+INSERT INTO flights VALUES (seq_flights.NEXTVAL, 'AIR INDIA', 07341051683, 'DUBAI', 'INDIA', '17-JUL-2016', 0800, 1200, 'CHARTER', 390, 130, 294);
+INSERT INTO flights VALUES (seq_flights.NEXTVAL, 'EMIRATES', 07341051684, 'ISLAMABAD', 'PAKISTAN', '18-JUL-2016', 0900, 1300, 'LOW COST', 395, 135, 295);
+INSERT INTO flights VALUES (seq_flights.NEXTVAL, 'PIA', 07341051685, 'DUBAI', 'UAE', '19-JUL-2016', 1200, 1900, 'CHARTER', 385, 121, 290);
+
+
+
+-- L O C A T I O N S
+
+INSERT INTO locations VALUES (seq_locations.NEXTVAL, 'PARIS', 'AVENUE WEST', 'FRANCE', 'MARKET AREA', '21-OCT-2016');
+INSERT INTO locations VALUES (seq_locations.NEXTVAL,'LAHORE', 'PARK EAST', 'PAKISTAN', 'DISTRICT AREA', '22-OCT-2016');
+INSERT INTO locations VALUES (seq_locations.NEXTVAL,'PUNE', 'AVENUE EAST', 'INDIA', 'HIGH STREET AREA', '23-OCT-2016');
+INSERT INTO locations VALUES (seq_locations.NEXTVAL, 'CHICAGO', 'PARK WEST', 'USA', 'STREET AREA', '24-OCT-2016');
+INSERT INTO locations VALUES (seq_locations.NEXTVAL, 'SYDNEY', 'AVENUE SOUTH', 'AUSTRALIA', 'COUNTRYSIDE AREA', '25-OCT-2016');
+
+
+
+-- H O T E L S
+
+INSERT INTO hotels 
+(hotel_id, location_id, hotel_name, hotel_address, contact_no, location_country, arrival_date, hotel_rating, room_number, hotel_type, hotel_facilities, hotel_size, hotel_cost)
+VALUES (seq_hotels.NEXTVAL, 99999900, 'RADISSON', '20 WHITEHOUSE PARK', '01908582401', 'FRANCE', '21-OCT-2016', '3STAR', 12, 'RESORT', 'SPA', '2 FLOOR', '£100');
+
+
+INSERT INTO hotels 
+(hotel_id, location_id, hotel_name, hotel_address, contact_no, location_country, arrival_date, hotel_rating, room_number, hotel_type, hotel_facilities, hotel_size, hotel_cost)
+VALUES (seq_hotels.NEXTVAL, 99999905, 'FOUR SEASONS', '21 CROWNHILL', '01908582402', 'PAKISTAN', '22-OCT-2016', '4STAR', 14, 'FOREST', 'JACUZZI', '5 FLOOR', '£120');
+
+
+INSERT INTO hotels 
+(hotel_id, location_id, hotel_name, hotel_address, contact_no, location_country, arrival_date, hotel_rating, room_number, hotel_type, hotel_facilities, hotel_size, hotel_cost)
+VALUES (seq_hotels.NEXTVAL, 99999910, 'NOVOTEL', '12 CARLBOROUGH', '01908582403', 'INDIA', '23-OCT-2016', '5STAR', 17, 'RESORT', 'SWIMMING POOL', '1 FLOOR', '£200');
+
+
+INSERT INTO hotels 
+(hotel_id, location_id, hotel_name, hotel_address, contact_no, location_country, arrival_date, hotel_rating, room_number, hotel_type, hotel_facilities, hotel_size, hotel_cost)
+VALUES (seq_hotels.NEXTVAL, 99999915, 'CITY PRIDE', '27 PETERBOROUGH', '01908582404', 'USA', '24-OCT-2016', '2STAR', 14, 'FOREST', 'CLUB', '2 FLOORS', '£50');
+
+
+INSERT INTO hotels 
+(hotel_id, location_id, hotel_name, hotel_address, contact_no, location_country, arrival_date, hotel_rating, room_number, hotel_type, hotel_facilities, hotel_size, hotel_cost)
+VALUES (seq_hotels.NEXTVAL, 99999920, 'JW MARIOT', '7 CHARING', '01908582405', 'AUSTRALIA', '25-OCT-2016', '5STAR', 20, 'RESORT', 'GYM', '1 FLOOR', '£170');
+
+
+
+-- H O L I D A Y  D E T A I L S
+
+INSERT INTO holiday_details VALUES (seq_holiday_details.NEXTVAL, 11110000, 77777770, 88888885,  12345670, 'BOOK FOR 4 DAYS', 66666660, 11111110, 33333330);
+INSERT INTO holiday_details VALUES (seq_holiday_details.NEXTVAL, 11110005, 77777775, 88888890,  12345670, 'BOOK FOR 5 DAYS', 66666665, 11111135, 33333335);
+INSERT INTO holiday_details VALUES (seq_holiday_details.NEXTVAL, 11110010, 77777780, 88888900,  12345675, 'BOOK FOR 6 DAYS', 66666670, 11111140, 33333340);
+INSERT INTO holiday_details VALUES (seq_holiday_details.NEXTVAL, 11110015, 77777785, 88888900,  12345685, 'BOOK FOR 3 DAYS', 66666675, 11111145, 33333345);
+INSERT INTO holiday_details VALUES (seq_holiday_details.NEXTVAL, 11110020, 77777785, 88888900,  12345690, 'BOOK FOR 7 DAYS', 66666680, 11111150, 33333350);
+
+
+
+
+
+

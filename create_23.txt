@@ -1,0 +1,205 @@
+-- @G:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\create_23.txt
+-- @F:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\create_23.txt
+/* 
+CSY1026 - ASSIGNMENT 2  
+
+GROUP 23 MEMBERS: ASHLEIGH FOSTER (16427265), AMNA HIRA MAHMOOD (16433342), HAMZA MEHMOOD (15418599), AAKANKSHA PATIL (16432582)
+
+SQL-ORACLE Login: csy1026_264@student/CSY1026_264 
+
+DATE: 16/02/2017
+*/
+
+CREATE  TABLE customers(
+		customer_id 		NUMBER(8)		 NOT NULL,
+		title				VARCHAR2(4),
+		customer_firstname 	VARCHAR2(15),
+		customer_lastname 	VARCHAR2(15),
+		address_line1 		VARCHAR2(15),
+		town 				VARCHAR2(20),
+		county 				VARCHAR2(10),
+		country 			VARCHAR2(10)	 DEFAULT 'UK',
+		contact_number 		VARCHAR2(13),
+		email 				VARCHAR2(30),
+		gender 				CHAR,
+		booking_date 		DATE);
+
+		
+CREATE TABLE teams (
+		team_id 			NUMBER(8),
+		team_name 			VARCHAR2(15),
+		department_name 	VARCHAR2(15),
+		description 		VARCHAR2(50),
+		contact_number 		VARCHAR2(13),
+		department_email 	VARCHAR2(20),
+		date_registered 	DATE 			DEFAULT SYSDATE);
+
+		
+CREATE TABLE sales_reps (
+		staff_id 			NUMBER(8),
+		title 				VARCHAR2(4),
+		staff_firstname 	VARCHAR2(15),
+		staff_lastname		VARCHAR2(15),
+		team_id 			NUMBER(8) 		NOT NULL,
+		address_line1 		VARCHAR2(15),
+		town 				VARCHAR2(20),
+		county 				VARCHAR2(10),
+		postcode 			VARCHAR2(10),
+		country 			VARCHAR2(10),
+		contact_number 		VARCHAR2(13),
+		email 				VARCHAR2(30),
+		gender 				CHAR,
+		date_registered 	DATE);
+
+
+CREATE TABLE payment_methods (
+		payment_id			NUMBER(8),
+		payment_m_details 	VARCHAR2(50));
+
+
+CREATE TABLE customer_payments(
+		customer_payment_id NUMBER(8),
+		customer_firstame 	VARCHAR2(15),
+		customer_lastname 	VARCHAR2(15),
+		payment_method 		VARCHAR2(10),
+		payment_details 	VARCHAR2(50),
+		payment_id			NUMBER(8) 		NOT NULL,
+		customer_id			NUMBER(8) 		NOT NULL);
+
+		
+CREATE TABLE bills (
+		bill_id				NUMBER(8),
+		amount 				VARCHAR2(6),
+		description 		VARCHAR2(50),
+		date_invoiced 		DATE,
+		customer_payment_id NUMBER(8) 		NOT NULL);
+
+		
+CREATE TABLE holidays (
+		holiday_id 			NUMBER(8),
+		location_name 		VARCHAR2(20),
+		bill_id 			NUMBER(8) 		NOT NULL,
+		customer_id 		NUMBER(8) 		NOT NULL,
+		staff_id 			NUMBER(8) 		NOT NULL);
+
+		
+CREATE TABLE boards (
+		board_id 			NUMBER(8),
+		board_type 			VARCHAR2(15),
+		description 		VARCHAR2(50));
+
+		
+CREATE TABLE flights (
+		flight_id 			NUMBER(8),
+		flight_name 		VARCHAR2(30),
+		contact_no 			VARCHAR2(11),
+		location_name 		VARCHAR2(30),
+		location_country 	VARCHAR2(40),
+		arrival_date 		DATE,
+		departure_time 		VARCHAR(8),
+		arrival_time 		VARCHAR2(8),
+		flight_type 		VARCHAR2(10),
+		total_seats 		NUMBER(3),
+		seats_onboard 		NUMBER(3),
+		seats_booked 		NUMBER(3));
+
+		
+CREATE TABLE locations (
+		location_id 		NUMBER(8),
+		location_name 		VARCHAR2(30),
+		hotel_address 		VARCHAR2(25),
+		location_country 	VARCHAR2(50),
+		location_area 		VARCHAR2(50),
+		arrival_date 		DATE);
+
+		
+CREATE TABLE hotels (
+		hotel_id 			NUMBER(8),
+		location_id 		NUMBER(8) 		NOT NULL,
+		contact_no 			VARCHAR2(11),
+		location_country 	VARCHAR2(50),
+		arrival_date 		DATE,
+		hotel_rating 		VARCHAR2(4),
+		room_number 		NUMBER(7),
+		hotel_type 			VARCHAR2(10),
+		hotel_facilities 	VARCHAR2(25),
+		hotel_size 			VARCHAR2(8),
+		hotel_cost 			VARCHAR2(6));
+
+		
+CREATE TABLE holiday_details (
+		holiday_details_id 	NUMBER(8),
+		holiday_id 			NUMBER(8) 		NOT NULL,
+		board_id 			NUMBER(8) 		NOT NULL,
+		flight_id 			NUMBER(8) 		NOT NULL,
+		hotel_id 			NUMBER(8) 		NOT NULL,
+		description 		VARCHAR2(50),
+		bill_id 			NUMBER(8) 		NOT NULL,
+		customer_id 		NUMBER(8) 		NOT NULL,
+		staff_id 			NUMBER(8)		NOT NULL);
+
+		
+-- S E Q U E N C E S
+
+
+CREATE SEQUENCE seq_customers
+		INCREMENT BY 	5
+		START WITH 		11111110
+		MAXVALUE 		11111200;
+
+		
+CREATE SEQUENCE seq_teams
+		INCREMENT BY	5
+		START WITH 		22222220
+		MINVALUE 		22222220;
+
+		
+CREATE SEQUENCE seq_sales_reps
+		INCREMENT BY 	5
+		START WITH 		33333330;
+
+		
+CREATE SEQUENCE seq_payment_methods
+		INCREMENT BY 	5
+		START WITH 		44444440;
+
+		
+CREATE SEQUENCE seq_customer_payments
+		INCREMENT BY 	5
+		START WITH 		55555550;
+
+		
+CREATE SEQUENCE seq_bills
+		INCREMENT BY 	5
+		START WITH 		66666660;
+
+		
+CREATE SEQUENCE seq_boards
+		INCREMENT BY 	5
+		START WITH 		77777770;
+
+		
+CREATE SEQUENCE seq_flights
+		INCREMENT BY 	5
+		START WITH 		88888880;
+
+		
+CREATE SEQUENCE seq_locations
+		INCREMENT BY 	5
+		START WITH 		99999900;
+
+		
+CREATE SEQUENCE seq_hotels
+		INCREMENT BY 	5
+		START WITH 		12345670;
+
+		
+CREATE SEQUENCE seq_holiday_details
+		INCREMENT BY 	5
+		START WITH 		35353500
+		MAXVALUE 		35353590;
+
+		
+SELECT * FROM tab;
+
+SELECT sequence_name, min_value, max_value, increment_by FROM user_sequences;

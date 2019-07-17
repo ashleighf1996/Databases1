@@ -1,0 +1,138 @@
+-- @G:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\drop_23.txt
+-- @F:\Uni1stYear\Databases\Term2\Assignment2\ScriptFiles\drop_23.txt
+/* 
+CSY1026 - ASSIGNMENT 2  
+GROUP 23 MEMBERS: ASHLEIGH FOSTER (16427265), AMNA HIRA MAHMOOD (16433342), HAMZA MEHMOOD (15418599), AAKANKSHA PATIL (16432582)
+SQL-ORACLE Login: csy1026_264@student/CSY1026_264 DATE: 16/02/2017
+*/
+
+-- D R O P  C H E C K / U N I Q U E  C O N S T R A I N T S
+
+ALTER TABLE customers
+DROP CONSTRAINT u_email;
+
+ALTER TABLE flights
+DROP CONSTRAINT u_contact_no;
+
+ALTER TABLE sales_reps
+DROP CONSTRAINT ck_sales_reps_title;
+
+ALTER TABLE customers
+DROP CONSTRAINT ck_customers_title;
+
+ALTER TABLE customers
+DROP CONSTRAINT ck_customers_gender;
+
+-- D R O P  F O R E I G N   K E Y S
+
+ALTER TABLE sales_reps
+DROP CONSTRAINT fk_sr_teams; 
+
+ALTER TABLE customer_payments
+DROP CONSTRAINT fk_cp_payment_methods; 
+
+ALTER TABLE customer_payments
+DROP CONSTRAINT fk_cp_customers;
+ 
+ALTER TABLE bills
+DROP CONSTRAINT fk_b_customer_payments; 
+
+ALTER TABLE holidays
+DROP CONSTRAINT fk_h_bills;
+ 
+ALTER TABLE holidays
+DROP CONSTRAINT fk_h_customers; 
+
+ALTER TABLE holidays
+DROP CONSTRAINT fk_h_sales_reps; 
+
+ALTER TABLE hotels
+DROP CONSTRAINT fk_h_locations; 
+
+ALTER TABLE holiday_details
+DROP CONSTRAINT fk_hd_holidays; 
+
+ALTER TABLE holiday_details
+DROP CONSTRAINT fk_hd_boards; 
+
+ALTER TABLE holiday_details
+DROP CONSTRAINT fk_hd_flights; 
+
+ALTER TABLE holiday_details
+DROP CONSTRAINT fk_hd_hotels; 
+
+
+-- Primary keys drop
+
+ALTER TABLE customers
+DROP CONSTRAINT pk_customers;
+
+ALTER TABLE teams
+DROP CONSTRAINT pk_teams;
+
+ALTER TABLE sales_reps
+DROP CONSTRAINT pk_sales_reps;
+
+ALTER TABLE payment_methods
+DROP CONSTRAINT pk_payment_methods;
+
+ALTER TABLE customer_payments
+DROP CONSTRAINT pk_customer_payments;
+
+ALTER TABLE bills
+DROP CONSTRAINT pk_bills;
+
+ALTER TABLE holidays
+DROP CONSTRAINT pk_holidays;
+
+ALTER TABLE boards
+DROP CONSTRAINT pk_boards;
+
+ALTER TABLE flights
+DROP CONSTRAINT pk_flights;
+
+ALTER TABLE locations
+DROP CONSTRAINT pk_locations;
+
+ALTER TABLE hotels
+DROP CONSTRAINT pk_hotels;
+
+ALTER TABLE holiday_details
+DROP CONSTRAINT pk_holiday_details;
+
+-- T A B L E  D R O P
+
+DROP TABLE holiday_details;
+DROP TABLE hotels;
+DROP TABLE locations;
+DROP TABLE flights;
+DROP TABLE boards;
+DROP TABLE holidays;
+DROP TABLE bills;
+DROP TABLE customer_payments;
+DROP TABLE payment_methods;
+DROP TABLE sales_reps;
+DROP TABLE teams;
+DROP TABLE customers;
+
+-- S E Q U E N C E S   D R O P
+
+DROP SEQUENCE seq_customers;
+DROP SEQUENCE seq_teams; 
+DROP SEQUENCE seq_sales_reps;
+DROP SEQUENCE seq_payment_methods;
+DROP SEQUENCE seq_customer_payments;
+DROP SEQUENCE seq_bills;
+DROP SEQUENCE seq_boards;
+DROP SEQUENCE seq_flights;
+DROP SEQUENCE seq_locations;
+DROP SEQUENCE seq_hotels;
+DROP SEQUENCE seq_holiday_details;
+
+
+
+purge recyclebin;
+
+SELECT * FROM tab;
+SELECT sequence_name, min_value, max_value, increment_by FROM user_sequences;
+SELECT constraint_name, table_name FROM user_constraints;
